@@ -44,6 +44,9 @@ liner2 = cv2.line(half2, (coord2[1]), (coord2[len(coord2) - 1]), (0, 255, 0), 8)
 final = np.concatenate((half1, half2), axis = 1)
 
 cv2.imwrite("answer.png", final)
+
+'''
+cv2.imshow("Image", final)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+'''
