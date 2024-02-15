@@ -5,6 +5,7 @@ img = cv2.imread('assets/red.png', 1)
 # Resized image to work with easier (Commented out)
 #img = cv2.resize(img, (0, 0), fx = 0.4, fy = 0.4)
 img2 = img
+# Finds dimensions of image
 height = img.shape[0]
 width = img.shape[1]
 # Splits image vertically into 2 halves, 1 half for each line
@@ -38,7 +39,7 @@ def createContour(contours):
         #cv2.drawContours(half2, [approx], 0, (0, 0, 0), 5)
         n = approx.ravel() 
         i = 0
-        # Puts coordinates of contours in array
+        # Adds coordinates of contours into an array
         for j in n : 
             if(i % 2 == 0): 
                 x = n[i] 
